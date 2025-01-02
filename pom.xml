@@ -13,28 +13,51 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-boot-flyway-mongodb</name>
     <description>spring-boot-flyway-mongodb</description>
-    <url/>
-    <licenses>
-        <license/>
-    </licenses>
-    <developers>
-        <developer/>
-    </developers>
-    <scm>
-        <connection/>
-        <developerConnection/>
-        <tag/>
-        <url/>
-    </scm>
     <properties>
         <java.version>23</java.version>
+        <lombok.version>1.18.36</lombok.version>
+        <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
+        <maven.compiler.proc>full</maven.compiler.proc>
+        <flyway.database.mongodb.version>10.10.0</flyway.database.mongodb.version>
+        <mongo.jdbc.driver.version>1.19</mongo.jdbc.driver.version>
     </properties>
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongodb-driver-sync</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-core</artifactId>
+            <version>${flyway.database.mongodb.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.flywaydb/flyway-database-mongodb -->
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-database-mongodb</artifactId>
+            <version>11.1.0</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.github.kornilova203</groupId>
+                    <artifactId>mongo-jdbc-driver</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.github.kornilova203</groupId>
+            <artifactId>mongo-jdbc-driver</artifactId>
+            <version>1.19</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/mongo-jdbc-standalone-1.20.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
@@ -55,6 +78,8 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
             <optional>true</optional>
         </dependency>
         <dependency>
