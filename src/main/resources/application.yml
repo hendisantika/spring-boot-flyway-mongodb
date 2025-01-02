@@ -1,0 +1,21 @@
+spring:
+  application.name: spring-boot-flyway-mongodb
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    mongodb:
+      uri: mongodb://yu71:53cret@localhost:27017/users_db?authSource=admin
+    environment: "mongodb"
+    fail-on-missing-locations: true
+    sqlMigrationSuffixes:
+      - ".js"
+  data:
+    mongodb:
+      #      uri: mongodb://localhost:27017/users_db
+      uri: mongodb://yu71:53cret@localhost:27017/users_db?authSource=admin
+      database: users_db
+  datasource:
+    url: jdbc:mongodb://localhost:27017/users_db
+    driver-class-name: com.dbschema.MongoJdbcDriver
+flyway:
+  debug: true
