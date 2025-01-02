@@ -1,4 +1,4 @@
-package id.my.hendisantika.springbootflywaymongodb;
+package id.my.hendisantika.flywaymongodb;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,4 +1,4 @@
-package id.my.hendisantika.springbootflywaymongodb.entity;
+package id.my.hendisantika.flywaymongodb.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
