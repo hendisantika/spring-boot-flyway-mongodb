@@ -43,13 +43,13 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        <dependency>
-            <groupId>com.github.kornilova203</groupId>
-            <artifactId>mongo-jdbc-driver</artifactId>
-            <version>1.19</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/lib/mongo-jdbc-standalone-1.20.jar</systemPath>
-        </dependency>
+        <!--        <dependency>-->
+        <!--            <groupId>com.github.kornilova203</groupId>-->
+        <!--            <artifactId>mongo-jdbc-driver</artifactId>-->
+        <!--            <version>1.19</version>-->
+        <!--            <scope>system</scope>-->
+        <!--            <systemPath>${project.basedir}/lib/mongo-jdbc-standalone-1.20.jar</systemPath>-->
+        <!--        </dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-mongodb</artifactId>
