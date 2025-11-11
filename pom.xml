@@ -35,7 +35,7 @@
         <dependency>
             <groupId>org.flywaydb</groupId>
             <artifactId>flyway-database-mongodb</artifactId>
-            <version>11.16.0</version>
+            <version>11.17.0</version>
             <exclusions>
                 <exclusion>
                     <groupId>com.github.kornilova203</groupId>
