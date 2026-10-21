@@ -9,11 +9,12 @@ spring:
     fail-on-missing-locations: true
     sqlMigrationSuffixes:
       - ".js"
-  data:
-    mongodb:
-      #      uri: mongodb://localhost:27017/users_db
-      uri: mongodb://yu71:53cret@localhost:27017/users_db?authSource=admin
-      database: users_db
+  mongodb:
+    #    uri: mongodb://localhost:27017/users_db
+    uri: mongodb://yu71:53cret@localhost:27017/users_db?authSource=admin
+    database: users_db
+    representation:
+      uuid: standard
   datasource:
     url: jdbc:mongodb://localhost:27017/users_db
     driver-class-name: com.dbschema.MongoJdbcDriver
